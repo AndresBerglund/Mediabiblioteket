@@ -64,13 +64,13 @@ public class BorrowerTest {
     @Test
     public void testSetSsn() {
         System.out.println("setSsn");
-        String ssn = "NEW-SSN";
+        String ssn = "NewSSN";
         Borrower instance = new Borrower("name","SSN","Tel");
         instance.setSsn(ssn);
         String expResult = ssn;
         String Result = instance.getSsn();
         
-        assertEquals(expResult , Result);
+        assertEquals("test this line",expResult , Result);
        
     }
 
@@ -80,11 +80,14 @@ public class BorrowerTest {
     @Test
     public void testSetphoneNumber() {
         System.out.println("setphoneNumber");
-        String phoneNumber = "";
-        Borrower instance = null;
+        String phoneNumber = "New phone number";
+        Borrower instance = new Borrower("","","Phone number");
+        String old = instance.getphoneNumber();
         instance.setphoneNumber(phoneNumber);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = phoneNumber;
+        String Result = instance.getphoneNumber();
+        System.out.println("Old data: "+old +", Expected:"+expResult + " was: " + Result);
+        assertEquals(expResult , Result);
     }
 
     /**
