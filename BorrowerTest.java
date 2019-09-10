@@ -42,18 +42,18 @@ public class BorrowerTest {
      */
     @Test
     public void testSetName() {
+       
+        String name = "setName";
+        Borrower instance = new Borrower(name,"","");                   
+        
+        String expResult = "setName";
+        String actResult = instance.getName();
+        
+     
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
         System.out.println("");
-        String name = "Lisa Svensson";
-        Borrower instance = new Borrower("Harald Svensson","891216-1111","040-471024");
-        System.out.println(instance.getName());
-        instance.setName(name);
-        System.out.println(instance.getName());
-        
-        String expResult = name;
-        String Result = instance.getName();
-        
-        assertEquals(expResult,Result );
-        
+        assertEquals(expResult,actResult );
         
        
     }
@@ -63,15 +63,16 @@ public class BorrowerTest {
      */
     @Test
     public void testSetSsn() {
-        System.out.println("setSsn");
-        String ssn = "NewSSN";
-        Borrower instance = new Borrower("name","SSN","Tel");
-        instance.setSsn(ssn);
-        String expResult = ssn;
-        String Result = instance.getSsn();
-        
-        assertEquals("test this line",expResult , Result);
+        String ssn = "setSsn";
+        Borrower instance = new Borrower("",ssn,"");
        
+        String expResult = "setSsn";
+        String actResult = instance.getSsn();
+        
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
+        System.out.println("");
+        assertEquals(expResult,actResult );
     }
 
     /**
@@ -79,43 +80,50 @@ public class BorrowerTest {
      */
     @Test
     public void testSetphoneNumber() {
-        System.out.println("setphoneNumber");
-        String phoneNumber = "New phone number";
-        Borrower instance = new Borrower("","","Phone number");
-        String old = instance.getphoneNumber();
-        instance.setphoneNumber(phoneNumber);
-        String expResult = phoneNumber;
-        String Result = instance.getphoneNumber();
-        System.out.println("Old data: "+old +", Expected:"+expResult + " was: " + Result);
-        assertEquals(expResult , Result);
+       
+        String numer = "setNumber";
+        Borrower instance = new Borrower("","",numer);
+        String expResult = "setNumber";
+        String actResult = instance.getphoneNumber();
+        
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
+        System.out.println("");
+        assertEquals(expResult,actResult );
     }
+    
 
     /**
      * Test of getSsn method, of class Borrower.
      */
     @Test
     public void testGetSsn() {
-        System.out.println("getSsn");
-        Borrower instance = null;
-        String expResult = "";
-        String result = instance.getSsn();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Borrower instance = new Borrower ("","getSsn","");
+        String expResult = "getSsn";
+        String actResult = instance.getSsn();
+        
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
+        System.out.println("");
+        
+        assertEquals(expResult, actResult);
     }
 
     /**
      * Test of getName method, of class Borrower.
      */
     @Test
+       
     public void testGetName() {
-        System.out.println("getName");
-        Borrower instance = null;
-        String expResult = "";
-        String result = instance.getName();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        Borrower instance = new Borrower("getName","","");
+        String expResult = "getName";
+        String actResult = instance.getName();
+                
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
+        System.out.println("");
+        assertEquals(expResult,actResult);
     }
 
     /**
@@ -123,13 +131,15 @@ public class BorrowerTest {
      */
     @Test
     public void testGetphoneNumber() {
-        System.out.println("getphoneNumber");
-        Borrower instance = null;
-        String expResult = "";
-        String result = instance.getphoneNumber();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        Borrower instance = new Borrower ("","","number");
+        String expResult = "number";
+        String actResult = instance.getphoneNumber();
+                
+        System.out.println("expResult = " + expResult);
+        System.out.println("actResult = " + actResult);
+        System.out.println("");
+        assertEquals(expResult, actResult);
     }
     
 }
