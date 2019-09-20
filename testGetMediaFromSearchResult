@@ -1,0 +1,12 @@
+  @Test
+    public void testGetMediaFromSearchResult() {
+        System.out.println("getMediaFromSearchResult");        
+        LibraryController instance = new LibraryController(new GUI());        
+        
+        instance.searchMediaAllByString("Bok");
+        
+        Media expResult = new Book("Bok","Agenten","277877",2005,"Grisham");
+        Media result = instance.getMediaFromSearchResult("Bok - Borrowed  - Agenten - 2005 - Grisham");
+        
+        assertEquals(expResult, result);
+    }
